@@ -41,7 +41,7 @@ describe('Associations', () => {
             })
     });
 
-    it.only('saves a full relation tree', (done) => {
+    it('saves a full relation tree', (done) => {
         User.findOne({
                 name: 'Joe'
             })
