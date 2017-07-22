@@ -12,7 +12,11 @@ const UserSchema = new Schema({
     required: [true, 'Name is required in UserSchema.']
   },
   posts: [PostSchema],
-  likes: Number
+  likes: Number,
+  blogPosts: [{
+    type: Schema.Types.ObjectId,
+    ref: 'blogPost'
+  }]
 });
 
 UserSchema.virtual('postCount').get(function() { // use function instead of fat arrow
