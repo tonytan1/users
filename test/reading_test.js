@@ -32,7 +32,7 @@ describe('Reading users out of the database', () => {
 
   it('can skip and limit the result set', (done) => {
     User.find({})
-      .sort({ name: 1 })
+      .sort({ name: 1 })//1:ascending -1: descending
       .skip(1)
       .limit(2)
       .then((users) => {
